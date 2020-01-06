@@ -1,0 +1,44 @@
+/* components/popup/index.wxss */
+.hd-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.hd-mask-bg {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.6;
+}
+.hd-popup {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+.hd-popup-content-align-center {
+  align-items: center;
+  justify-content: center;
+}
+.hd-popup-content-align-top {
+  align-items: flex-start;
+  justify-content: center;
+}
+.hd-popup-content-align-bottom {
+  align-items: flex-end;
+  justify-content: center;
+}
+.hd-popup-content-align-left {
+  align-items: center;
+  justify-content: flex-start;
+}
+.hd-popup-content-align-right {
+  align-items: center;
+  justify-content: flex-end;
+}

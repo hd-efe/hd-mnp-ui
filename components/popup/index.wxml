@@ -1,0 +1,7 @@
+<!--components/popup/index.wxml-->
+<view class="hd-mask">
+<view class="hd-mask-bg"></view>
+</view>
+<view style="z-index: {{zIndex}}" class="hd-popup hd-popup-content-align-{{align}}">
+  <slot></slot>
+</view>

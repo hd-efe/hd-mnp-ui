@@ -1,13 +1,17 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<button ontap="showPopup">点击</button>
+  <popup class="popup" align="bottom">
+    <view class="popup__content">
+      <view class="popup__header">
+        <view class="close" bindtap="close">X</view>
+      </view> 
+       <scroll-view class="popup_content" enable-back-to-top style="height: {{scrollViewHeight}}rpx;" scroll-y="true" bindscrolltolower="lower" bindscroll="scroll">
+        <view id="demo1" class="scroll-view-item demo-text-1"></view>
+          <view id="demo2"  class="scroll-view-item demo-text-2"></view>
+          <view id="demo3" class="scroll-view-item demo-text-3"></view>
+       </scroll-view>
+      <view class="popup__footer">1</view>
+    </view>
+  </popup>
 </view>
